@@ -40,13 +40,14 @@ public class Reader : User
     }
     public class Librarian : User
     {
-       
-        public Librarian(string name, string email, string phonenumber, string address, int age,string gender)
+        private string Librarian_id;
+        public Librarian(string name, string email, string phonenumber, string address, int age,string gender ,string Librarian_id)
         : base(name, email, phonenumber, address, age, gender)
 
         {
-  
-        
+            this.Librarian_id = Librarian_id;
+
+
         }
 
     }
