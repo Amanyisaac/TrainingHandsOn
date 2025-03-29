@@ -1,27 +1,52 @@
-﻿using System;
+﻿using Online_Bookstore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Online_Bookstore
 {
     public class Order
     {
-        private string name;
-        private string address;
-        private string email;
-        private string phonenumber;
-        User user;
+        private Book book;
+        private Reader reader;
+        private OrderType type;
+        private DateTime date;
 
-        public Order(string name, string address, string email, string phonenumber, User user)
+        public Order(Book book, Reader reader, OrderType type, DateTime date)
         {
-            this.name = name;
-            this.address = address;
-            this.email = email;
-            this.phonenumber = phonenumber;
-            this.user = user;
+            this.book = book;
+            this.reader = reader;
+            this.type = type;
+            this.date = date;
+        }
+
+
+        public char GetOrderType()
+        {
+            bool isPurchase = type == OrderType.Purchase;
+            if (isPurchase)
+            {
+                return 'P';
+            }
+            else
+            {
+                return 'R';
+            }
+        }
+
+
+
+        public enum OrderType
+        {
+            Purchase,
+            Rent
         }
     }
 }
+
+
+ 

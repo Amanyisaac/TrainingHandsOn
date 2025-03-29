@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace Online_Bookstore
 {
-  public  class BookAuthor
+
+
+    public class BookAuthor
     {
         private String name;
-          private String email;
-
+        private String email;
+        List<Book> books;
 
         public BookAuthor(string name, string email)
         {
             this.name = name;
             this.email = email;
+            this.books = new List<Book>();
         }
     }
 }
+
