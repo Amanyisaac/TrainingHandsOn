@@ -10,23 +10,23 @@ namespace Online_Bookstore
 
     public class Library
     {
-        private String LibraryName;
-        private String LibraryAddress;
-        private String LibraryEmail;
-        private String LibraryPhoneNumber;
-        private List<Book> books;
-        private List<Reader> readers;
-        private List<Librarian> librarians;
+        public string Name { get; private set; }
+        public string Address { get; private set; }
+        public string Email { get; private set; }
+        public string PhoneNumber { get; private set; }
+        public List<Book> Books { get; private set; }
+        public List<Reader> Readers { get; private set; }
+        public List<Librarian> Librarians { get; private set; }
 
-        public Library(string LibraryName, string LibraryAddress, string LibraryEmail, string LibraryPhoneNumber)
+        public Library(string name, string address, string email, string phoneNumber)
         {
-            this.LibraryName = LibraryName;
-            this.LibraryAddress = LibraryAddress;
-            this.LibraryEmail = LibraryEmail;
-            this.LibraryPhoneNumber = LibraryPhoneNumber;
-            this.books = new List<Book>();
-            this.readers = new List<Reader>();
-            this.librarians = new List<Librarian>();
+            this.Name = name;
+            this.Address = address;
+            this.Email = email;
+            this.PhoneNumber = phoneNumber;
+            this.Books = new List<Book>();
+            this.Readers = new List<Reader>();
+            this.Librarians = new List<Librarian>();
         }
 
     }

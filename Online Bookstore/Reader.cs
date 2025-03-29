@@ -8,11 +8,12 @@ namespace Online_Bookstore
 {
     public class Reader : User
     {
-        private List<Book> books;
+        public List<Book> Books { get; private set; }
 
-        public Reader(string name, string email, string phonenumber, string address, int age, string gender, string id) : base(name, email, phonenumber, address, age, gender, id)
+        public Reader(string name, string email, string phoneNumber, string address, int age, string gender, string id)
+            : base(name, email, phoneNumber, address, age, gender, id)
         {
-            this.books = new List<Book>();
+           this.Books = new List<Book>();
 
         }
 

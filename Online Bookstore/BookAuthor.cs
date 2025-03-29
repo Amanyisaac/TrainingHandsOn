@@ -10,15 +10,16 @@ namespace Online_Bookstore
 
     public class BookAuthor
     {
-        private String name;
-        private String email;
-        List<Book> books;
+        public string Name { get; private set; }
+        public string Email { get; private set; }
+        public List<Book> Books { get; private set; }
 
-        public BookAuthor(string name, string email)
+
+        public BookAuthor(String name, String email)
         {
-            this.name = name;
-            this.email = email;
-            this.books = new List<Book>();
+            this.Name = name;
+            this.Email = email;
+            this.Books = new List<Book>();
         }
     }
 }

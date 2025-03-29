@@ -11,23 +11,23 @@ namespace Online_Bookstore
 {
     public class Order
     {
-        private Book book;
-        private Reader reader;
-        private OrderType type;
-        private DateTime date;
+        public Book Book { get; private set; }
+        public Reader Reader { get; private set; }
+        public OrderType Type { get; private set; }
+        public DateTime Date { get; private set; }
 
         public Order(Book book, Reader reader, OrderType type, DateTime date)
         {
-            this.book = book;
-            this.reader = reader;
-            this.type = type;
-            this.date = date;
+            this.Book = book;
+            this.Reader = reader;
+            this.Type = type;
+            this.Date = date;
         }
 
 
         public char GetOrderType()
         {
-            bool isPurchase = type == OrderType.Purchase;
+            bool isPurchase = Type == OrderType.Purchase;
             if (isPurchase)
             {
                 return 'P';

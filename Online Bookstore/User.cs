@@ -11,22 +11,23 @@ namespace Online_Bookstore
 
     public class User
     {
-        private String name;
-        private string email;
-        private string phonenumber;
-        private String address;
-        private int age;
-        private string gender;
-        public string id;
-        public User(string name, string email, string phonenumber, string address, int age, string gender, string id)
+        public string Name { get; private set; }
+        public string Email { get; private set; }
+        public string PhoneNumber { get; private set; }
+        public string Address { get; private set; }
+        public int Age { get; private set; }
+        public string Gender { get; private set; }
+        public string Id { get; private set; }
+
+        public User(String name, String email, String phonenumber, String address, int age, String gender, String id)
         {
-            this.name = name;
-            this.email = email;
-            this.phonenumber = phonenumber;
-            this.address = address;
-            this.age = age;
-            this.gender = gender;
-            this.id = id;
+            this.Name = name;
+            this.Email = email;
+            this.PhoneNumber = phonenumber;
+            this.Address = address;
+            this.Age = age;
+            this.Gender = gender;
+            this.Id = id;
 
 
         }

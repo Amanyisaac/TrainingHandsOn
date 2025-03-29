@@ -8,24 +8,23 @@ namespace Online_Bookstore
 {
     public class Book
     {
-        private String title;
-        private String author;
-        private String publisher;
-        private int types;
-        private int pages;
-        private double price;
-        private List<BookAuthor> bookAuthors;
+        public String Title { get; private set; }
+         public string Publisher { get; private set; }
+        public int Pages { get; private set; }
+        public int Type { get; private set; }
+        public double Price { get; private set; }
+        public List<BookAuthor> Authors { get; private set; }
 
-        public Book(string title, string author, string publisher, int types, int pages, double price)
+
+
+        public Book(String title,  String publisher, int type, int pages, double price)
         {
-            this.title = title;
-            this.author = author;
-            this.publisher = publisher;
-            this.types = types;
-            this.pages = pages;
-            this.price = price;
-            this.bookAuthors = new List<BookAuthor>();
-
+            this.Title = title;
+            this.Publisher =publisher;
+            this.Type = type;
+            this.Pages = pages;
+            this.Price = price;
+            this.Authors = new List<BookAuthor>();
         }
 
     }
