@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Online_Bookstore;
- 
 namespace Online_Bookstore
 {
 
@@ -27,6 +26,10 @@ namespace Online_Bookstore
             this.Books = new List<Book>();
             this.Readers = new List<Reader>();
             this.Librarians = new List<Librarian>();
+        }
+        public void AddBook(Book book)
+        {
+            Books.Add(book);
         }
 
     }
