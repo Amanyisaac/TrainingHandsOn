@@ -9,7 +9,7 @@ namespace Online_Bookstore
     public class Book
     {
         public String Title { get; private set; }
-         public string Publisher { get; private set; }
+         public String Publisher { get; private set; }
         public int Pages { get; private set; }
         public int Type { get; private set; }
         public double Price { get; private set; }

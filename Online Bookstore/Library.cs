@@ -9,10 +9,10 @@ namespace Online_Bookstore
 
     public class Library
     {
-        public string Name { get; private set; }
-        public string Address { get; private set; }
-        public string Email { get; private set; }
-        public string PhoneNumber { get; private set; }
+        public String Name { get; private set; }
+        public String Address { get; private set; }
+        public String Email { get; private set; }
+        public String PhoneNumber { get; private set; }
         public List<Book> Books { get; private set; }
         public List<Reader> Readers { get; private set; }
         public List<Librarian> Librarians { get; private set; }

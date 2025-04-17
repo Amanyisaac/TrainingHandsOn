@@ -10,8 +10,8 @@ namespace Online_Bookstore
 
     public class BookAuthor
     {
-        public string Name { get; private set; }
-        public string Email { get; private set; }
+        public String Name { get; private set; }
+        public String Email { get; private set; }
         public List<Book> Books { get; private set; }
 
 
