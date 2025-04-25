@@ -12,15 +12,13 @@ namespace Ride_Sharing_App
         public int RatingValue { get; set; }
         public DateTime ReviewDate { get; set; }
         public DateTime ReviewTime { get; set; }
-        public String ReviewStatus { get; set; }
-        public Review(String reviewtext, int ratingvalue, DateTime reviewdate, DateTime reviewtime, String reviewstatus)
+         public Review(String reviewtext, int ratingvalue, DateTime reviewdate, DateTime reviewtime)
         {
             ReviewText = reviewtext;
             RatingValue = ratingvalue;
             ReviewDate = reviewdate;
             ReviewTime = reviewtime;
-            ReviewStatus = reviewstatus;
-
+ 
         }
     }
 }

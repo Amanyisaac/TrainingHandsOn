@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ride_Sharing_App
+namespace Online_Food_Delivery_App
 {
- 
     public class User
     {
         public String Id { get; set; }
@@ -15,18 +14,18 @@ namespace Ride_Sharing_App
         public String PhoneNumber { get; set; }
         public String Address { get; set; }
         public String PasswordOfoAccount { get; set; }
-
-        List<Ride> rides = new List<Ride>(); 
-        public User(String id, String name, String email, String phoneNumber, String passwordOfoAccount, String address )
+        public List<Review> Reviews { get; set; }
+        public List<Order> Orders { get; set; } = new List<Order>();
+        public User(String id, String name, String email, String phoneNumber, String passwordOfoAccount, String address)
         {
-
             Id = id;
             Name = name;
             Email = email;
             PhoneNumber = phoneNumber;
             Address = address;
             PasswordOfoAccount = passwordOfoAccount;
-            rides = new List<Ride>();
+            Reviews = new List<Review>();
+            Orders = new List<Order>();
 
         }
     }

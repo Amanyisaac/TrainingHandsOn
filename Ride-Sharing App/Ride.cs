@@ -8,7 +8,7 @@ namespace Ride_Sharing_App
 {
     public class Ride
     {
-        public int RideId { get; set; }
+        public String RideId { get; set; }
         public String RideType { get; set; } 
         public String RideStatus { get; set; }  
         public DateTime RideDateTime { get; set; }
@@ -17,7 +17,7 @@ namespace Ride_Sharing_App
         public double RideCost { get; set; }
 
          
-        public Ride(int rideid, String ridetype, String ridestatus, DateTime ridedatetime, String startlocation, String endlocation, double ridecost)
+        public Ride(String rideid, String ridetype, String ridestatus, DateTime ridedatetime, String startlocation, String endlocation, double ridecost)
         {
             RideId = rideid;
             RideType = ridetype;
@@ -29,3 +29,10 @@ namespace Ride_Sharing_App
         }
     }
 }
+
+
+
+
+
+
+

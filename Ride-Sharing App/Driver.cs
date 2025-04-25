@@ -14,9 +14,9 @@ namespace Ride_Sharing_App
         public String LicenseNumber { get; set; }
         public Vehicle Vehicle { get; set; }
         List<Ride> rides;
-            public Driver(int id, String name, String email, String phoneNumber, String passwordOfoAccount,
+        public Driver(String id , String name, String email, String phoneNumber, String passwordOfoAccount,
                 String address, String licensenumber, Vehicle vehicle ) :
-                base(id, name, email, phoneNumber, passwordOfoAccount, address )
+                base(id ,name, email, phoneNumber, passwordOfoAccount, address )
         {
 
                 LicenseNumber = licensenumber;
