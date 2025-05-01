@@ -7,16 +7,24 @@ using System.Threading.Tasks;
 namespace Ride_Sharing_App
 {
     public class Notification
-    {
-        public String NotificationType { get; set; }
+    { 
+        public int Id { get; set; }
+         public String NotificationType { get; set; }
          public DateTime NotificationTime { get; set; }
         public String NotificationStatus { get; set; }
-       
-        public Notification(String notificationtype, DateTime notificationtime, String notificationstatus)
+        public Driver Driver { get; set; }
+        public Passenger Passenger { get; set; }
+
+        public Notification(int id,String notificationtype, DateTime notificationtime, String notificationstatus, Driver driver,Passenger passenger)
         {
+            Id = id;
             NotificationType = notificationtype;
-             NotificationTime = notificationtime;
+            NotificationTime = notificationtime;
             NotificationStatus = notificationstatus;
+             Passenger = passenger;
+            Driver = driver;
+
+
 
         }
     }

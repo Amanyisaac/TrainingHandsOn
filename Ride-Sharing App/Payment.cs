@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,25 +10,26 @@ namespace Ride_Sharing_App
 {
     public class Payment
     {
+        public int Id { get; set; }
         public String PaymentMethod { get; set; }
-        public double Amount { get; set; }
+        public String PaymentStatus { get; set; }
         public DateTime PaymentDate { get; set; }
+        public double Amount { get; set; }
+         public Passenger Payer { get; set; }
+        public Passenger Payee { get; set; }
 
-        public Payment(String paymentMethod, double amount, DateTime paymentDate)
+        public Payment(int id, String paymentMethod, String paymentStatus, DateTime paymentDate, double amount ,Passenger payer, Passenger payee)
         {
+            Id = id;
             PaymentMethod = paymentMethod;
-            Amount = amount;
+            PaymentStatus = paymentStatus;
             PaymentDate = paymentDate;
-        }
+            Amount = amount;
+             Payer = payer;
+            Payee = payee;
 
-        public string GetPaymentMethod(String paymentMethod)
-        {
-            if (paymentMethod == "Cash" || paymentMethod == "Visa")
-            {
-                return paymentMethod;
-            }
-            return "Invalid";
+
         }
     }
-}
-
+    }
+ 

@@ -15,7 +15,7 @@ namespace Online_Food_Delivery_App
         public List<Notifications> Notifications { get; set; }
         public List<Location> Locations { get; set; }
 
-        public PersonOfDelivery(String id, String name, String email, String phoneNumber, String passwordOfoAccount,
+        public PersonOfDelivery(int id, String name, String email, String phoneNumber, String passwordOfoAccount,
             String address, String vehicleType, String vehicleNumber, String vehicleModel, String vehicleColor) :
             base(id, name, email, phoneNumber, passwordOfoAccount, address)
         {

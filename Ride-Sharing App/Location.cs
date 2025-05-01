@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 namespace Ride_Sharing_App
 {
     public class Location
-    {
-         public String StartLocation { get; set; }
-        public String EndLocation { get; set; }
+    { 
+        public int Id { get; set; }
+        public String Longitude { get; set; }
+        public String Latitude { get; set; }
 
-        public Location( String startlocation, String endlocation)
+        public Location(int id, String longitude, String latitude)
         {
-           
-            StartLocation = startlocation;
-            EndLocation = endlocation;
-
+            Id = id;
+            Longitude = longitude;
+            Latitude = latitude;
         }
+
     }
 }
 

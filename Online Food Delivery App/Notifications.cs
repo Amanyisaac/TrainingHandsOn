@@ -8,11 +8,13 @@ namespace Online_Food_Delivery_App
 {
     public class Notifications
     {
+        public int Id { get; set; }
         public String NotificationMessage { get; set; }
         public DateTime NotificationTime { get; set; }
 
-        public Notifications(String notificationmessage, DateTime notificationtime)
+        public Notifications(int id ,String notificationmessage, DateTime notificationtime)
         {
+            Id = id;
             NotificationMessage = notificationmessage;
             NotificationTime = notificationtime;
         }

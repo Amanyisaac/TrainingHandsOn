@@ -11,16 +11,18 @@ namespace Ride_Sharing_App
     public class Driver : User
     {
 
-        public String LicenseNumber { get; set; }
+         public List<Payment> Payments { get; set; } // Payments made by the driver          
         public Vehicle Vehicle { get; set; }
-        List<Ride> rides;
-        public Driver(String id , String name, String email, String phoneNumber, String passwordOfoAccount,
-                String address, String licensenumber, Vehicle vehicle ) :
-                base(id ,name, email, phoneNumber, passwordOfoAccount, address )
+        public Location Location { get; set; }
+        public List<Ride> rides;
+         public Driver(int id , String name, String email, String phoneNumber, String passwordOfoAccount,
+                String address,  Vehicle vehicle , Review review , Location location , Payment payment) :
+                base(id ,name, email, phoneNumber, passwordOfoAccount, address , review )
         {
 
-                LicenseNumber = licensenumber;
-                Vehicle = vehicle;
+            Payments = new List<Payment>();
+            Vehicle = vehicle;
+                 Location = location;
               rides = new List<Ride>();
  
 

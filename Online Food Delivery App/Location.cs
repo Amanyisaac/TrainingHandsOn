@@ -9,13 +9,14 @@ namespace Online_Food_Delivery_App
  
     public class Location
 {
-    public String StartLocation { get; set; }
-    public String EndLocation { get; set; }
-
-    public Location(String startlocation, String endlocation)
-    {
-        StartLocation = startlocation;
-        EndLocation = endlocation;
+        public int Id { get; set; }
+        public String Longitude { get; set; }
+        public String Latitude { get; set; }
+        public Location(int id, String longitude, String latitude)
+        {
+            Id = id;
+            Longitude = longitude;
+            Latitude = latitude;
+        }
     }
-}
 }

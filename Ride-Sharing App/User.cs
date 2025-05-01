@@ -9,15 +9,16 @@ namespace Ride_Sharing_App
  
     public class User
     {
-        public String Id { get; set; }
+        public int Id { get; set; }
         public String Name { get; set; }
         public String Email { get; set; }
         public String PhoneNumber { get; set; }
         public String Address { get; set; }
         public String PasswordOfoAccount { get; set; }
+         List<Ride> rides = new List<Ride>();
+        public Review Review { get; set; }
 
-        List<Ride> rides = new List<Ride>(); 
-        public User(String id, String name, String email, String phoneNumber, String passwordOfoAccount, String address )
+        public User(int id, String name, String email, String phoneNumber, String passwordOfoAccount, String address,Review review )
         {
 
             Id = id;
@@ -27,6 +28,7 @@ namespace Ride_Sharing_App
             Address = address;
             PasswordOfoAccount = passwordOfoAccount;
             rides = new List<Ride>();
+            Review = review;
 
         }
     }

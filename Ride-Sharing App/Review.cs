@@ -7,18 +7,22 @@ using System.Threading.Tasks;
 namespace Ride_Sharing_App
 {
     public class Review
-    {
+    {  
+        public int Id;
         public String ReviewText { get; set; }
-        public int RatingValue { get; set; }
-        public DateTime ReviewDate { get; set; }
-        public DateTime ReviewTime { get; set; }
-         public Review(String reviewtext, int ratingvalue, DateTime reviewdate, DateTime reviewtime)
+         public DateTime ReviewDate { get; set; }
+         public Passenger Reviewer { get; set; }  
+        public Passenger Reviewed { get; set; }
+
+        public Review(int id, String reviewtext,  DateTime reviewdate, Passenger reviewer, Passenger reviewed)
         {
+            Id = id;
             ReviewText = reviewtext;
-            RatingValue = ratingvalue;
-            ReviewDate = reviewdate;
-            ReviewTime = reviewtime;
- 
+             ReviewDate = reviewdate;
+            Reviewer = reviewer;
+            Reviewed = reviewed;
         }
     }
-}
+    }
+
+ 
