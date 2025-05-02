@@ -24,6 +24,7 @@ namespace Online_Food_Delivery_App
             DeliveryLocation = deliveryLocation;
             DeliveryPersonName = deliveryPersonName;
             DeliveryPersonContact = deliveryPersonContact;
+
         }
     }
 }

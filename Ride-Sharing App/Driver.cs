@@ -11,7 +11,7 @@ namespace Ride_Sharing_App
     public class Driver : User
     {
 
-         public List<Payment> Payments { get; set; } // Payments made by the driver          
+         public List<Payment> Payments { get; set; }     
         public Vehicle Vehicle { get; set; }
         public Location Location { get; set; }
         public List<Ride> rides;
