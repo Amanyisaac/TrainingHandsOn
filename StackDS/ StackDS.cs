@@ -43,17 +43,22 @@ namespace DataStrutures.StackDS
             }
         }
 
-        public int pop()
+       
+public int pop()
         {
-            int value = top.Data;
-            Node delptr = top;
-            value = top.Data;
-            top = top.Next;
-
-            return value;
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return -1;
+            }
+            else
+            {
+                int value = top.Data; // store the data of the top node to return it later
+                top = top.Next;// move the top to the next node
+                return value;// return the value of the popped node
+            }
         }
-
-
+ 
 
         public int peek()
         {
